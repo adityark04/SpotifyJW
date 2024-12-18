@@ -1,0 +1,286 @@
+/* Body Background */
+.body-bg {
+    background: linear-gradient(135deg, #240046, #5a189a, #9d4edd);
+    color: white;
+    font-family: 'sans-serif';
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-blend-mode:overlay;
+    margin: 0;
+    overflow-x: hidden;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar */
+.nav-bar {
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation Items with Equal Spacing */
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* Logo Adjustments */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo-img {
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid #f72585;
+    transition: transform 0.3s ease;
+}
+.logo-img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    background: linear-gradient(to right, #f72585, #9d4edd);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* Navigation Items Styling */
+.nav-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+}
+.nav-item:hover {
+    color: #f72585;
+    background-color: rgba(157, 78, 221, 0.2);
+}
+.active {
+    color: #f72585;
+    font-weight: bold;
+}
+
+/* Dropdown Menus */
+.group:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 0.5rem;
+    list-style: none;
+    z-index: 10;
+    width: max-content;
+    white-space: nowrap;
+}
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+.dropdown-item:hover {
+    background-color: #9d4edd;
+}
+
+/* HERO BANNER */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #240046, #5a189a);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+/* Container Section */
+.container {
+    min-height: 75vh;
+    background: linear-gradient(135deg, rgba(36, 0, 70, 0.9), rgba(90, 24, 154, 0.8), rgba(157, 78, 221, 0.7));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Song List Items */
+.songList {
+    width: 100%;
+    margin-top: 2rem;
+}
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 100%;
+    margin: 15px 0;
+    padding: 1rem;
+    border-radius: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.songItem:hover {
+    background-color: rgba(157, 78, 221, 0.2);
+    transform: scale(1.02);
+    transform: translateY(-3px);
+}
+.songItem img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+.song-name {
+    font-size: 1.2rem;
+    flex: 1;
+}
+.songlistplay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.songItemContainer{
+    margin:10px
+}
+.timestamp {
+    font-size: 1rem;
+    color: #ffffff;
+    flex-shrink:0;
+}
+.songlistplay i {
+    color: #f72585;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.songlistplay i:hover {
+    color: #9d4edd;
+    transform: scale(1.2);
+}
+.songItem.playing {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-left: 5px solid #f72585; 
+    box-shadow: 0px 0px 15px rgba(157, 78, 221, 0.4); /* Subtle glow effect */
+
+
+}
+
+
+
+/* Bottom Music Player */
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 120px;
+    background: rgba(36, 0, 70, 0.9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:column;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+}
+.icons {
+    margin-top: 14px;
+    display: flex;
+    gap: 2rem;
+}
+.icons i {
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.icons i:hover {
+    color: #f72585;
+    transform: scale(1.2);
+}
+#myProgressBar {
+    width: 80vw;
+    margin: 0 auto;
+    height: 8px;
+    background: #5a189a;
+    border-radius: 10px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+#myProgressBar::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #f72585;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid white;
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .container {
+        width: 90%;
+    }
+    #myProgressBar {
+        width: 90vw;
+    }
+}
+
+.songInfo{
+    position:relative;
+    font-family:'Varela Round' , sans-serif;
+    color: white;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify</title>
+</head>
+<body class="body-bg">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Spotify Logo" class="logo-img">
+            <span class="logo-text">Spotify</span>
+        </div>
+
+        <ul class="nav-items">
+            <li class="nav-item active">Home</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item relative group">
+                <span class="nav-item">Playlist</span>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">R&B</li>
+                    <li class="dropdown-item">Rap</li>
+                    <li class="dropdown-item">Love</li>
+                </ul>
+            </li>
+            <li class="nav-item relative group">
+                <span class="nav-item">Accounts</span>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">Login</li>
+                    <li class="dropdown-item">Sign In</li>
+                    <li class="dropdown-item">Help</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        Best of Juice Wrld
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="songList">
+            <h1 class="text-3xl font-bold">Unreleased Playlist</h1>
+            <div class="songItemContainer">
+                         
+                <!-- Song 1 -->
+                <div class="songItem">
+                    <img src="Images/j2.jpeg" alt="2" class="song-image">
+                    <span class="songName">Memories</span>
+                    <div class="songlistplay">
+                        <span class="timestamp" id="timestamp-1">03:47</span>
+                        <i id="1" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+                <!-- Song 2 -->
+                <div class="songItem">
+                    <img src="Images/j1.jpeg" alt="1" class="song-image">
+                    <span class="songName">I don't wanna know</span>
+                    <div class="songlistplay flex">
+                        <span class="timestamp" id="timestamp-0">02:49</span>
+                        <i id="0" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+
+                <!-- Song 3 -->
+                <div class="songItem">
+                    <img src="Images/j3.jpeg" alt="3" class="song-image">
+                    <span class="songName">My Home</span>
+                    <div class="songlistplay">
+                        <span class="timestamp" id="timestamp-2">03:41</span>
+                        <i id="2" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+
+                <!-- Song 4  -->
+                <div class="songItem">
+                    <img src="Images/j6.jpeg" alt="3" class="song-image">
+                    <span class="songName">Moonlight</span>
+                    <div class="songlistplay">
+                        <span class="timestamp" id="timestamp-5">02:58</span>
+                        <i id="5" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+
+                
+                
+                <!-- Song 5 -->
+                <div class="songItem">
+                    <img src="Images/j4.jpeg" alt="3" class="song-image">
+                    <span class="songName">734</span>
+                    <div class="songlistplay">
+                        <span class="timestamp" id="timestamp-3">15:36</span>
+                        <i id="3" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+                
+                <!-- Song 6 -->
+                <div class="songItem">
+                    <img src="Images/j5.jpeg" alt="3" class="song-image">
+                    <span class="songName">Way too Many</span>
+                    <div class="songlistplay">
+                        <span class="timestamp" id="timestamp-4">05:34</span>
+                        <i id="4" class="fa-solid songItemPlay fa-3x fa-play-circle"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Music Player -->
+   <div class="bottom">
+    <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+    <div class="icons">
+        <i class="fa-solid fa-2x fa-backward-step"></i>
+        <i class="fa-solid fa-3x fa-play-circle" id="masterPlay"></i>
+        <i class="fa-solid fa-2x fa-forward-step"></i>
+    </div>
+    <div class="songInfo">
+        <span class="songName">Song Name</span>
+        <!-- Add the timestamp here -->
+        <span id="timestamp">00:00 / 00:00</span>
+    </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/ff66b8f544.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
